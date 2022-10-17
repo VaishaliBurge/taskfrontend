@@ -24,7 +24,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage/>} default />
-        <Route path="/recipes/:title"  element={<DetailsPage/>} />
+        <Route path="/recipe/:title"  element={<DetailsPage/>} />
       </Routes>
     </div>
    </BrowserRouter>
