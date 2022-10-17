@@ -51,7 +51,7 @@ const Carousel = () => {
     return (
             <Link 
             className={classes.carouselItem} 
-            to={`/recepie/${data.title}`}
+            to={`/recipe/${data.title}`}
             >
             <img className={classes.image}
                 src = {data?.photo}
