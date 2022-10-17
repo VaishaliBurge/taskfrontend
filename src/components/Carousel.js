@@ -6,7 +6,7 @@ import AliceCarousel from 'react-alice-carousel';
 import { Link } from 'react-router-dom'
 
 
-const useSyles = makeStyles ( () =>  ({
+const useSyles = makeStyles ( (theme) =>  ({
     title:{
         height: "50%",
         display:"flex",
@@ -22,6 +22,28 @@ const useSyles = makeStyles ( () =>  ({
     }
     ,image:{
       flexDirection: "column",
+
+      [theme.breakpoints.down("md")]: {
+        width: "100%",
+        marginTop: 0,
+        padding: 20,
+        paddingTop: 0,
+      }, 
+
+      [theme.breakpoints.down("sm")]: {
+        width: "70%",
+        height:"60",
+        marginTop: 0,
+        padding: 20,
+        paddingTop: 0,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "50%",
+      height:"50%",
+      marginTop: 0,
+      padding: 20,
+      paddingTop: 0,
+    }
   },
 }) )
 
@@ -68,14 +90,14 @@ const Carousel = () => {
     )
     } )
 
-  const responsive = {
+ const responsive = {
     0:{
         items:1,
     },
-    512: {
+    1024: {
         items:2
     }
-  }  
+  }
 
   return (
     <div className={classes.Carousel} style={{flexDirection:"column", width :"100%"}}>
